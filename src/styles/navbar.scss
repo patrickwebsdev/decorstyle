@@ -1,0 +1,21 @@
+.navbar {
+  z-index: 3;
+  height: 4rem;
+  background-color: #FFF;
+  box-shadow: 0em 0em 2em 0.1em #00000035;
+  &-brand {
+    font-weight: 700;
+  }
+  &-nav {
+    .nav-link {
+      text-transform: uppercase;
+      font-weight: 500;
+      &.active {
+        font-weight: 600;
+      }
+    }
+  }
+  .container {
+    background-color: #FFF;
+  }
+}

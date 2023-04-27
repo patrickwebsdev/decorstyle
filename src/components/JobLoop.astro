@@ -1,0 +1,17 @@
+---
+import JobContainer from './JobContainer.astro';
+interface Props {
+  resource: string;
+  jobNumber: number;
+  jobTotalImages: number;
+}
+const { resource, jobNumber, jobTotalImages } = Astro.props;
+---
+
+<div class="row" expand-images="">
+  {
+    Array.from(Array(jobTotalImages)).map((_,index) =>
+      <JobContainer src={`../images/${resource}/${jobNumber}/${index+1}.jpg`} />
+    )
+  }
+</div>

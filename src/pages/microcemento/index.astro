@@ -1,0 +1,25 @@
+---
+import Layout from '@layouts/Layout.astro';
+import '@styles/card-job.scss'
+import '@styles/gallery.scss';
+import '@styles/utils.scss';
+import '@styles/header-service.scss';
+import JobCard from '@components/JobCard.astro';
+---
+
+<Layout title="DecorStyle | Microcemento">
+  <header id="home" class="microcemento">
+    <h1>MICROCEMENTO</h1>
+  </header>
+  <section id="construccion-seco" class="mt-5 mb-5">
+    <div class="container">
+      <div class="row">
+        <JobCard link={"1.html"} src={"../images/microcemento/1/1.jpg"} />
+        <JobCard link={"1.html"} src={"../images/microcemento/1/1.jpg"} />
+        <JobCard link={"1.html"} src={"../images/microcemento/1/1.jpg"} />
+        <JobCard link={"1.html"} src={"../images/microcemento/1/1.jpg"} />
+        <JobCard link={"1.html"} src={"../images/microcemento/1/1.jpg"} />
+      </div>
+    </div>
+  </section>
+</Layout>

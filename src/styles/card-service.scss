@@ -1,0 +1,45 @@
+
+.card-service {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  height: 100%;
+  box-shadow: 0em 0em 2em 0.1em #00000035;
+  transition: all 500ms;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-1rem);
+    box-shadow: 0em 0em 2em 0.1em #00000075;
+    transition: all 500ms;
+  }
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    max-width: 10rem;
+    margin-bottom: 1rem;
+  }
+  h5 {
+    padding-bottom: 0.5rem;
+    color: #000;
+  }
+  p {
+    text-align: center;
+    color: #292929;
+    font-size: 0.95rem;
+  }
+  button {
+    width: 100%;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+    background-color: #3999D5;
+    color: #FFF;
+    border: none;
+    font-weight: 600;
+  }
+}
