@@ -12,7 +12,7 @@ const { jobLimit, resource } = Astro.props;
 <div class="row">
   {
     Array.from(Array(jobLimit)).map((_,index) =>
-      <JobCard link={index+1} src={`../images/${resource}/${index+1}/1.jpg`} />
+      <JobCard link={index+1} src={`/decorstyle/images/${resource}/${index+1}/1.jpg`} />
     )
   }
 </div>
