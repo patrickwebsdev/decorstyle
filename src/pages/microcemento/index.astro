@@ -1,5 +1,5 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import Service from '@layouts/Service.astro';
 import '@styles/card-job.scss'
 import '@styles/gallery.scss';
 import '@styles/utils.scss';
@@ -8,7 +8,7 @@ import { jobDynamic } from '@config/microcemento';
 import JobCards from '@components/JobCards.astro';
 ---
 
-<Layout title="DecorStyle | Microcemento">
+<Service title="DecorStyle | Microcemento">
   <header id="home" class="microcemento">
     <h1>MICROCEMENTO</h1>
   </header>
@@ -19,4 +19,4 @@ import JobCards from '@components/JobCards.astro';
         resource={"microcemento"}/>
     </div>
   </section>
-</Layout>
+</Service>

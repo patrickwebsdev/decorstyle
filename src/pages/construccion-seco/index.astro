@@ -1,14 +1,14 @@
 ---
-import Layout from '@layouts/Jobs.astro';
 import '@styles/card-job.scss'
 import '@styles/gallery.scss';
 import '@styles/utils.scss';
 import '@styles/header-service.scss';
 import { jobDynamic } from '@config/construccion-seco';
 import JobCards from '@components/JobCards.astro';
+import Service from '@layouts/Service.astro';
 ---
 
-<Layout title="DecorStyle | Construccion en seco">
+<Service title="DecorStyle | Construccion en seco">
   <header id="home" class="construccion-seco">
     <h1>CONSTRUCCION EN SECO</h1>
   </header>
@@ -19,4 +19,4 @@ import JobCards from '@components/JobCards.astro';
         resource={"construccion-seco"}/>
     </div>
   </section>
-</Layout>
+</Service>

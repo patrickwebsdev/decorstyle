@@ -1,5 +1,5 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import Service from '@layouts/Service.astro';
 import '@styles/card-job.scss'
 import '@styles/gallery.scss';
 import '@styles/utils.scss';
@@ -8,7 +8,7 @@ import { jobDynamic } from '@config/revoque-plastico';
 import JobCards from '@components/JobCards.astro';
 ---
 
-<Layout title="DecorStyle | Revoque plastico">
+<Service title="DecorStyle | Revoque plastico">
   <header id="home" class="revoque-plastico">
     <h1>REVOQUE PLASTICO</h1>
   </header>
@@ -19,4 +19,4 @@ import JobCards from '@components/JobCards.astro';
         resource={"revoque-plastico"}/>
     </div>
   </section>
-</Layout>
+</Service>

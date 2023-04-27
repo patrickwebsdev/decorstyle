@@ -137,7 +137,7 @@ import LineSeparator from '@components/LineSeparator.astro';
           // get id of the intersecting section
           var id = entry.target.getAttribute('id');
           // find matching link & add appropriate class
-          var newLink = document.querySelector(`[href="#${id}"]`).classList.add('active');
+          var newLink = document.querySelector(`[data-item="${id}"]`).classList.add('active');
         }
       });
     }

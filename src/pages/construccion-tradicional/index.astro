@@ -1,5 +1,5 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import Service from '@layouts/Service.astro';
 import '@styles/card-job.scss'
 import '@styles/gallery.scss';
 import '@styles/utils.scss';
@@ -8,7 +8,7 @@ import { jobDynamic } from '@config/construccion-tradicional';
 import JobCards from '@components/JobCards.astro';
 ---
 
-<Layout title="DecorStyle | Construccion tradicional">
+<Service title="DecorStyle | Construccion tradicional">
   <header id="home" class="construccion-tradicional">
     <h1>CONSTRUCCION TRADICIONAL</h1>
   </header>
@@ -19,4 +19,4 @@ import JobCards from '@components/JobCards.astro';
         resource={"construccion-tradicional"}/>
     </div>
   </section>
-</Layout>
+</Service>
