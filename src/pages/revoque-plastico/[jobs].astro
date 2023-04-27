@@ -1,9 +1,9 @@
 ---
 import Gallery from '@layouts/Gallery.astro';
-import '@styles/gallery.scss';
 import '@styles/utils.scss';
 import JobLoop from '@components/JobLoop.astro';
 import { jobConfig, jobDynamic } from '@config/revoque-plastico';
+import '@styles/gallery.scss';
 export function getStaticPaths() {
   return jobDynamic;
 }
