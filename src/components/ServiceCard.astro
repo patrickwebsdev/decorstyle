@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  href: string;
+}
+const { title, description, image, href } = Astro.props;
+---
+<div class="col-lg-3 col-md-4 col-12 mb-4">
+  <a href={ href } class="card-service" data-service="pisos-deck">
+    <img src={ image } class="card-img-top" alt={ title }>
+    <div class="card-body">
+      <h5 class="card-title">{ title }</h5>
+      <p>{ description }</p>
+    </div>
+    <button>Ver trabajos</button>
+  </a>
+</div>
