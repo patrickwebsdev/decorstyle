@@ -4,7 +4,8 @@ import '@styles/card-job.scss'
 import '@styles/gallery.scss';
 import '@styles/utils.scss';
 import '@styles/header-service.scss';
-import JobCard from '@components/JobCard.astro';
+import { jobDynamic } from '@config/construccion-seco';
+import JobCards from '@components/JobCards.astro';
 ---
 
 <Layout title="DecorStyle | Construccion en seco">
@@ -13,13 +14,9 @@ import JobCard from '@components/JobCard.astro';
   </header>
   <section id="construccion-seco" class="mt-5 mb-5">
     <div class="container">
-      <div class="row">
-        <JobCard link={"1.html"} src={"../images/construccion-seco/1/1.jpg"} />
-        <JobCard link={"1.html"} src={"../images/construccion-seco/1/1.jpg"} />
-        <JobCard link={"1.html"} src={"../images/construccion-seco/1/1.jpg"} />
-        <JobCard link={"1.html"} src={"../images/construccion-seco/1/1.jpg"} />
-        <JobCard link={"1.html"} src={"../images/construccion-seco/1/1.jpg"} />
-      </div>
+      <JobCards
+        jobLimit={jobDynamic.length}
+        resource={"construccion-seco"}/>
     </div>
   </section>
 </Layout>

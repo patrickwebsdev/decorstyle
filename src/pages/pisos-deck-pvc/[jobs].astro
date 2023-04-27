@@ -1,0 +1,24 @@
+---
+import Gallery from '@layouts/Gallery.astro';
+import '@styles/gallery.scss';
+import '@styles/utils.scss';
+import JobLoop from '@components/JobLoop.astro';
+import { jobConfig, jobDynamic } from '@config/pisos-deck-pvc';
+export function getStaticPaths() {
+  return jobDynamic;
+}
+interface Props {
+  jobs: number;
+  resource: string;
+  jobTotalImage: number;
+}
+const { jobs } = Astro.params;
+---
+<Gallery title="DecorStyle | Pisos Deck PVC">
+  <div class="container">
+    <JobLoop
+      resource={"pisos-deck-pvc"}
+      jobNumber={Number(jobs)}
+      jobTotalImages={jobConfig[Number(jobs)-1]?.jobTotalImages ?? 0} />
+  </div>
+</Gallery>

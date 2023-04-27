@@ -4,22 +4,19 @@ import '@styles/card-job.scss'
 import '@styles/gallery.scss';
 import '@styles/utils.scss';
 import '@styles/header-service.scss';
-import JobCard from '@components/JobCard.astro';
+import { jobDynamic } from '@config/pisos-deck-pvc';
+import JobCards from '@components/JobCards.astro';
 ---
 
 <Layout title="DecorStyle | Pisos Deck Pvc">
   <header id="home" class="pisos-deck-pvc">
     <h1>PISOS DECK PVC</h1>
   </header>
-  <section id="construccion-seco" class="mt-5 mb-5">
+  <section id="pisos-deck-pvc" class="mt-5 mb-5">
     <div class="container">
-      <div class="row">
-        <JobCard link={"1.html"} src={"../images/construccion-seco/images/1/1.jpg"} />
-        <JobCard link={"1.html"} src={"../images/construccion-seco/images/1/1.jpg"} />
-        <JobCard link={"1.html"} src={"../images/construccion-seco/images/1/1.jpg"} />
-        <JobCard link={"1.html"} src={"../images/construccion-seco/images/1/1.jpg"} />
-        <JobCard link={"1.html"} src={"../images/construccion-seco/images/1/1.jpg"} />
-      </div>
+      <JobCards
+        jobLimit={jobDynamic.length}
+        resource={"pisos-deck-pvc"}/>
     </div>
   </section>
 </Layout>

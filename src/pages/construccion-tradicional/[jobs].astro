@@ -1,0 +1,19 @@
+---
+import Gallery from '@layouts/Gallery.astro';
+import '@styles/gallery.scss';
+import '@styles/utils.scss';
+import JobLoop from '@components/JobLoop.astro';
+import { jobConfig, jobDynamic } from '@config/construccion-tradicional';
+export function getStaticPaths() {
+  return jobDynamic;
+}
+const { jobs } = Astro.params;
+---
+<Gallery title="DecorStyle | Construccion tradiconal">
+  <div class="container">
+    <JobLoop
+      resource={"construccion-tradicional"}
+      jobNumber={Number(jobs)}
+      jobTotalImages={jobConfig[Number(jobs)-1]?.jobTotalImages ?? 0} />
+  </div>
+</Gallery>

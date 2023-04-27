@@ -10,7 +10,7 @@ const { resource, jobNumber, jobTotalImages } = Astro.props;
 
 <div class="row" expand-images="">
   {
-    Array.from(Array(jobTotalImages)).map((_,index) =>
+    Array.from(Array(jobTotalImages-1)).map((_,index) =>
       <JobContainer src={`../images/${resource}/${jobNumber}/${index+1}.jpg`} />
     )
   }

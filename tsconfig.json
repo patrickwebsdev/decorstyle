@@ -6,6 +6,7 @@
       "@components/*": ["src/components/*"],
       "@styles/*": ["src/styles/*"],
       "@layouts/*": ["src/layouts/*"],
+      "@config/*": ["src/config/*"],
       "@modules/*": ["src/modules/*"]
     }
   }

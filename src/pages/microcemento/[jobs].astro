@@ -1,0 +1,19 @@
+---
+import Gallery from '@layouts/Gallery.astro';
+import '@styles/gallery.scss';
+import '@styles/utils.scss';
+import JobLoop from '@components/JobLoop.astro';
+import { jobConfig, jobDynamic } from '@config/microcemento';
+export function getStaticPaths() {
+  return jobDynamic;
+}
+const { jobs } = Astro.params;
+---
+<Gallery title={"DecorStyle | Microcemento" + Number(jobs)}>
+  <div class="container">
+    <JobLoop
+      resource={"microcemento"}
+      jobNumber={Number(jobs)}
+      jobTotalImages={jobConfig[Number(jobs)-1]?.jobTotalImages ?? 0} />
+  </div>
+</Gallery>

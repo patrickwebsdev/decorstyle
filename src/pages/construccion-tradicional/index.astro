@@ -4,22 +4,19 @@ import '@styles/card-job.scss'
 import '@styles/gallery.scss';
 import '@styles/utils.scss';
 import '@styles/header-service.scss';
-import JobCard from '@components/JobCard.astro';
+import { jobDynamic } from '@config/construccion-tradicional';
+import JobCards from '@components/JobCards.astro';
 ---
 
 <Layout title="DecorStyle | Construccion tradicional">
   <header id="home" class="construccion-tradicional">
     <h1>CONSTRUCCION TRADICIONAL</h1>
   </header>
-  <section id="construccion-seco" class="mt-5 mb-5">
+  <section id="construccion-tradicional" class="mt-5 mb-5">
     <div class="container">
-      <div class="row">
-        <JobCard link={"1.html"} src={"../images/construccion-seco/images/1/1.jpg"} />
-        <JobCard link={"1.html"} src={"../images/construccion-seco/images/1/1.jpg"} />
-        <JobCard link={"1.html"} src={"../images/construccion-seco/images/1/1.jpg"} />
-        <JobCard link={"1.html"} src={"../images/construccion-seco/images/1/1.jpg"} />
-        <JobCard link={"1.html"} src={"../images/construccion-seco/images/1/1.jpg"} />
-      </div>
+      <JobCards
+        jobLimit={jobDynamic.length}
+        resource={"construccion-tradicional"}/>
     </div>
   </section>
 </Layout>
