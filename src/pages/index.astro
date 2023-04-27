@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import '@styles/utils.scss';
+import ClientCard from '@components/ClientCard.astro';
 ---
 <Layout title="DecorStyle">
   <nav class="navbar navbar-expand-lg fixed-top">
@@ -140,21 +141,15 @@ import '@styles/utils.scss';
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-4 col-12 mb-3">
-          <div class="card card-client">
-            <img src="./images/clients/latch.webp" alt="Latch">
-          </div>
-        </div>
-        <div class="col-md-4 col-12 mb-3">
-          <div class="card card-client">
-            <img src="./images/clients/horizon.webp" alt="Horizon">
-          </div>
-        </div>
-        <div class="col-md-4 col-12 mb-3">
-          <div class="card card-client">
-            <img src="./images/clients/collective.webp" alt="Collective">
-          </div>
-        </div>
+        <ClientCard
+          src={"./images/clients/latch.webp"}
+          alt={"Latch"}/>
+          <ClientCard
+            src={"./images/clients/horizon.webp"}
+            alt={"Horizon"}/>
+          <ClientCard
+            src={"./images/clients/collective.webp"}
+            alt={"Collective"}/>
       </div>
     </div>
   </section>

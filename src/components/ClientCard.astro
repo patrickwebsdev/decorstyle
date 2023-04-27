@@ -1,0 +1,21 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+}
+const { src, alt } = Astro.props;
+---
+<div class="col-md-4 col-12 mb-3">
+  <div class="card card-client">
+    <img src={src} alt={alt}>
+  </div>
+</div>
+<style>
+  .card-client {
+    background-color: #E8E6E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+  }
+</style>
