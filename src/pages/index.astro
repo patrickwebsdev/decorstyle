@@ -2,12 +2,10 @@
 import Layout from '@layouts/Layout.astro';
 import '@styles/utils.scss';
 import ClientCard from '@components/ClientCard.astro';
-import Nav from '@components/Nav.astro';
 import ServiceCard from '@components/ServiceCard.astro';
 import LineSeparator from '@components/LineSeparator.astro';
 ---
 <Layout title="DecorStyle">
-  <Nav />
   <section class="header" id="home">
     <h1>DECOR-STYLE</h1>
     <h2>Construccion - Remodelacion - terminaciones</h2>
@@ -126,30 +124,19 @@ import LineSeparator from '@components/LineSeparator.astro';
       });
     }
     window.initMap = initMap;
-
-    // simple function to use for callback in the intersection observer
     const changeNav = (entries, observer) => {
       entries.forEach((entry) => {
-        // verify the element is intersecting
         if(entry.isIntersecting && entry.intersectionRatio >= 0.55) {
-          // remove old active class
           document.querySelector('.active').classList.remove('active');
-          // get id of the intersecting section
           var id = entry.target.getAttribute('id');
-          // find matching link & add appropriate class
           var newLink = document.querySelector(`[data-item="${id}"]`).classList.add('active');
         }
       });
     }
-
-    // init the observer
     const options = {
       threshold: 0.55
     }
-
     const observer = new IntersectionObserver(changeNav, options);
-
-    // target the elements to be observed
     const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
       observer.observe(section);
